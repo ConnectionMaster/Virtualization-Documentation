@@ -2,9 +2,9 @@
 title: About Windows containers
 description: Containers are a technology for packaging and running apps--including Windows apps--across diverse environments on-premises and in the cloud. This topic discusses how Microsoft, Windows, and Azure help you develop and deploy apps in containers, including using Docker and Azure Kubernetes Service.
 keywords: docker, containers
-author: taylorb-microsoft
-ms.author: jgerend
-ms.date: 10/22/2019
+author: v-susbo
+ms.author: v-susbo
+ms.date: 06/22/2021
 ms.topic: overview
 ms.assetid: 8e273856-3620-4e58-9d1a-d1e06550448
 ---
@@ -14,7 +14,7 @@ Containers are a technology for packaging and running Windows and Linux applicat
 
 ![Graphic showing how containers can run in the cloud or on-premises, supporting monolithic apps or microservices written in nearly any language.](media/about-3-box.png)
 
-To view a roadmap of planned and currently available features, see the [Windows Server containers roadmap](https://github.com/microsoft/Windows-Containers/projects/1).
+To view a roadmap of planned and currently available features, see the [Windows Server containers roadmap](https://github.com/microsoft/Windows-Containers/projects/1). Also, see [Events](../deploy-containers/events.md) to view recent video presentations and blog posts for Windows Containers.
 
 ## The Microsoft container ecosystem
 
@@ -51,14 +51,14 @@ For more details on the similarities and differences of these complementary tech
 
 ## Container images
 
-All containers are created from container images. Container images are a bundle of files organized into a stack of layers that reside on your local machine or in a remote container registry. The container image consists of the user mode operating system files needed to support your app, your app, any runtimes or dependencies of your app, and any other miscellaneous configuration file your app needs to run properly.
+All containers are created from container images. Container images are a bundle of files organized into a stack of layers that reside on your local machine or in a remote container registry. The container image consists of the user mode operating system files needed to support your app, any runtimes or dependencies of your app, and any other miscellaneous configuration file your app needs to run properly.
 
 Microsoft offers several images (called base images) that you can use as a starting point to build your own container image:
 
 * <strong>Windows</strong> - contains the full set of Windows APIs and system services (minus server roles).
+* <strong>Windows Server</strong> - contains the full set of Windows APIs and system services.
 * <strong>Windows Server Core</strong> - a smaller image that contains a subset of the Windows Server APIs–namely the full .NET framework. It also includes most server roles, though sadly to few, not Fax Server.
 * <strong>Nano Server</strong> - the smallest Windows Server image, with support for the .NET Core APIs and some server roles.
-* <strong>Windows 10 IoT Core</strong> - a version of Windows used by hardware manufacturers for small Internet of Things devices that run ARM or x86/x64 processors.
 
 As mentioned earlier, container images are composed of a series of layers. Each layer contains a set of files that, when overlaid together, represent your container image. Because of the layered nature of containers, you don't have to always target a base image to build a Windows container. Instead, you could target another image that already carries the framework you want. For example, the .NET team publishes a [.NET core image](https://hub.docker.com/_/microsoft-dotnet-core) that carries the .NET core runtime. It saves users from needing to duplicate the process of installing .NET core–instead they can reuse the layers of this container image. The .NET core image itself is built based upon Nano Server.
 
@@ -94,9 +94,7 @@ Container orchestrators were built to help manage containers at scale and in pro
 
 There are many different orchestrators that you can use with Windows containers; here are the options Microsoft provides:
 - [Azure Kubernetes Service (AKS)](/azure/aks/intro-kubernetes) - use a managed Azure Kubernetes service
-- [Azure Service Fabric](/azure/service-fabric/) - use a managed service
 - [Azure Stack with the AKS Engine](/azure-stack/user/azure-stack-kubernetes-aks-engine-overview) - use Azure Kubernetes Service on-premises
-- [Kubernetes on Windows](../kubernetes/getting-started-kubernetes-windows.md) - set up Kubernetes yourself on Windows
 
 ## Try containers on Windows
 

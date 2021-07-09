@@ -4,7 +4,7 @@
 ## [About Windows containers](about/index.md)
 ## [Containers vs. VMs](about/containers-vs-vm.md)
 ## [System requirements](deploy-containers/system-requirements.md)
-## [FAQ](about/faq.md)
+## [FAQ](about/faq.yml)
 
 # Get Started
 ## [Set up your environment](quick-start/set-up-environment.md)
@@ -45,10 +45,12 @@
 # Concepts
 ## Windows Container Essentials
 ### [Container base Images](manage-containers/container-base-images.md)
+### [Base image servicing lifecycles](deploy-containers/base-image-lifecycle.md)
 ### [Isolation modes](manage-containers/hyperv-container.md)
 ### [Version compatibility](deploy-containers/version-compatibility.md)
 ### [Update containers](deploy-containers/update-containers.md)
 ### [Resource controls](manage-containers/resource-controls.md)
+### [Container time zones](manage-containers/virtual-time-zone.md)
 ## Docker
 ### [Docker Engine on Windows](manage-docker/configure-docker-daemon.md)
 ### [Remote management of a Windows Docker host](management/manage_remotehost.md)
@@ -64,6 +66,7 @@
 ### Docker Swarm
 #### [Swarm Mode](manage-containers/swarm-mode.md)
 ## Security
+### [Secure Windows containers](manage-containers/container-security.md)
 ### Group Managed Service Accounts
 #### [Create a gMSA](manage-containers/manage-serviceaccounts.md)
 #### [Configure your app to use a gMSA](manage-containers/gmsa-configure-app.md)
@@ -83,7 +86,6 @@
 ### [GPU acceleration](deploy-containers/gpu-acceleration.md)
 
 # Reference
-## [Base image servicing lifecycles](deploy-containers/base-image-lifecycle.md)
 ## [Events](deploy-containers/events.md)
 ## [Anti-virus optimization](/windows-hardware/drivers/ifs/anti-virus-optimization-for-windows-containers)
 ## [Container platform tools](deploy-containers/containerd.md)
@@ -93,7 +95,10 @@
 ## [Known Issues](manage-containers/known-issues.md)
 ## [Container samples](samples.md)
 ## [Windows Server containers roadmap](https://github.com/microsoft/Windows-Containers/projects/1)
-## [Licensing and pricing](https://www.microsoft.com/en-us/windows-server/pricing)
+## Licensing and support
+### [Pricing and licensing](https://www.microsoft.com/windows-server/pricing)
+### [Windows base OS images](https://hub.docker.com/_/microsoft-windows-base-os-images)
+### [File bugs](https://github.com/microsoft/Windows-Containers/issues)
 ## [Troubleshooting](troubleshooting.md)
 ## [Container forum](https://social.msdn.microsoft.com/Forums/home?forum=windowscontainers)
 ## [Community videos and blogs](communitylinks.md)
